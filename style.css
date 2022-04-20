@@ -14,3 +14,15 @@ Text Domain: mycustomtheme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+nav {
+    background-color: #9A899A;
+}
+
+.navbar-brand img {
+    width: 100px;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
