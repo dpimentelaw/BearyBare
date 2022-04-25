@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-Hello World 
+<div class="clearfix">Hello World</div>
 
 <?php get_footer(); ?>
