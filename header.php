@@ -11,10 +11,10 @@
   <body <?php body_class( ); ?>>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light custom-nav border-bottom fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light custom-nav">
   <div class="container">
     <a class="navbar-brand fs-1 fw-600" href="<?php echo bloginfo( 'url' ); ?>">
-        <img class="rounded-circle me-3" src="<?php echo get_template_directory_uri(); ?> /img/Beary_Bare Logo.png" alt="">Beary Bear
+        <img class="rounded-circle me-3" src="<?php echo get_theme_file_uri('/img/Beary_Bare Logo.png'); ?>" alt="">Beary Bear
     </a> 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
