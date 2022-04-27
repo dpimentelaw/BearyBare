@@ -17,6 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 nav {
     background-color: #9A899A;
+    opacity: ;
 }
 
 .navbar-brand img {
@@ -83,6 +84,8 @@ nav {
     font-size: 4em;
 }
 .about-image {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 } 
 .about-posts {
