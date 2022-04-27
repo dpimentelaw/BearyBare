@@ -6,11 +6,7 @@
     <p>This is the description</p>
     </div>
 </div>
-<div class="container about">
-    <div class="row pt-4 text-center">
-        <h2 class="about-header pb-5"> The Three Bears</h2>
-    </div>
-    
+
 <?php
     if(have_posts()) {
         while(have_posts()) {
