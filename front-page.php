@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <div class="hero-image d-flex flex-column justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_file_uri('/img/front-bear.jpg'); ?>);">
     <h1>This is the Title</h1>
     <hr class= "front-hr w-25">
@@ -53,5 +54,6 @@
         </form>
     </div>
 </div>
+
 
 <?php get_footer(); ?>
