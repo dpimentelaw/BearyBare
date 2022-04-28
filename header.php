@@ -31,7 +31,7 @@
                 'walker' => new bootstrap_5_wp_nav_menu_walker()
             ));
         ?>
-        <form class="d-flex ms-4" role="search" method="get" action="<?php echo home_url( '/' ); ?>"> 
+        <form class="d-flex ms-2" role="search" method="get" action="<?php echo home_url( '/' ); ?>"> 
             <div class="input-group">
                 <input type="search" class="form-control form-control-sm" 
                     placeholder="<?php echo esc_attr_x( 'Search for...', 'label' ) ?>" 

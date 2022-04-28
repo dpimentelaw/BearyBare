@@ -1,4 +1,4 @@
-<footer class="main-footer pt-5 pb-3">
+<footer class="main-footer pt-4">
         <div class="container">
           <div class="row">
               <div class="col fs-5 d-flex flex-column">

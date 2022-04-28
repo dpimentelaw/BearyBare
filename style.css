@@ -30,3 +30,7 @@ nav, .main-footer, .copy {
 .fw-600 {
     font-weight: 600;
 }
+
+nav ul > li {
+    margin-right: 1rem;
+}
