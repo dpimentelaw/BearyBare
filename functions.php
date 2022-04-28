@@ -10,8 +10,33 @@ function theme_files()
     wp_enqueue_script( 'bootstrap.js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), true, true);
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), true, true );
 
+    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 }
-add_action( 'wp_enqueue_scripts', 'theme_files' );
+add_action( 'wp_enqueue_scripts', 'theme_files');
+
+function bearyBare_features() {
+  add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme','bearyBare_features');
+
+function staff_post_types() { 
+    register_post_type('ceo',array (
+      'supports' => array('title','editor','thumbnail','custom-fields'),
+      'public' =>true,
+      'show_in_rest' =>true,
+      'labels' => array (
+        'name' => 'Staff',
+        'add_new_item' => 'Add New Staff Member',
+        'edit_item' => 'Edit Staff Member',
+        'all_items' => 'All Staff',
+        'singular_name' => 'Staff'
+      ),
+      'menu_icon' =>'dashicons-id'
+    ));
+
+}
+add_action('init','staff_post_types');
 
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
