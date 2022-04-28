@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="banner d-flex flex-column justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_file_uri('/img/banner.jpg'); ?>);">
-    <h1>This is the Title</h1>
+    <h1><?php the_title(); ?></h1>
     <hr class= "front-hr w-25">
     <p>This is the description</p>
     </div>
@@ -17,7 +17,7 @@ $staffPosts = new WP_Query(array (
 
 while($staffPosts ->have_posts()) {
         $staffPosts ->the_post(); ?>
-        <div class="row about-posts pb-5">
+        <div class="row about-posts">
             <div class="col-6 about-image">    
                 <?php the_post_thumbnail( 'medium_large');?> 
             </div>
