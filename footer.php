@@ -1,9 +1,6 @@
 <footer class="main-footer pt-4">
         <div class="container">
           <div class="row">
-                <!-- <a class="text-dark text-decoration-none fw-600" href="#">Archived Blogs</a>
-                <a class="text-dark text-decoration-none fw-600" href="#">About Us</a>
-                <a class="text-dark text-decoration-none fw-600" href="#">Support Us</a> -->
                   <?php if ( is_active_sidebar( 'footer_widgets' ) ) : ?>
                       <?php dynamic_sidebar( 'footer_widgets' ); ?>
                   <?php endif; ?>
