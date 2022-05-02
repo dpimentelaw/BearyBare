@@ -2,9 +2,9 @@
 
 
 <div class="hero-image d-flex flex-column justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_file_uri('/img/front-bear.jpg'); ?>);">
-    <h1>This is the Title</h1>
+    <h1><?php the_title(); ?></h1>
     <hr class= "front-hr w-25">
-    <p>This is the description</p>
+    <p><?php echo get_option('blogdescription'); ?></p>
     </div>
 </div>
 <div class="container front-blog">
@@ -12,34 +12,27 @@
         <h2 class="recent-posts"> Recent Posts</h2>
     </div>
     <div class="row pt-4">
-        <div class="col-4 d-flex flex-column align-items-center">
+    <?php
+        $frontPagePosts =new WP_Query( array (
+            'posts_per_page' =>3
+        ));
+        while ($frontPagePosts ->have_posts()) {
+            $frontPagePosts->the_post(); ?>
+          <div class="col-4 d-flex flex-column align-items-center">
             <div class="post-image border border-dark border-2" >
                 <img src="<?php echo get_theme_file_uri('/img/Beary_Bare Logo.png');?>" alt="Logo Image">
             </div>
-            <h3 class="text-center pt-3">TITLE</h3>
-            <p class="excerpt-front text-center pt-2 w-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
-                deserunt dignissimos sit recusandae unde fugiat illum quae numquam provident mollitia.</p>
+            <h3 class="text-center pt-3"><?php the_title(); ?></h3>
+            <p class="excerpt-front text-center pt-2 w-75"><?php echo wp_trim_words(get_the_content(),20);?></p>
         </div>
-        <div class="col-4 d-flex flex-column align-items-center">
-            <div class="post-image border border-dark border-2">
-                <img src="<?php echo get_theme_file_uri('/img/Beary_Bare Logo.png');?>" alt="Logo Image">
-            </div>
-            <h3 class="text-center pt-3">TITLE</h3>
-            <p class="excerpt-front text-center pt-2 w-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
-                deserunt dignissimos sit recusandae unde fugiat illum quae numquam provident mollitia.</p>
-        </div>
-        <div class="col-4 d-flex flex-column align-items-center">
-            <div class="post-image border border-dark border-2 ">
-                <img src="<?php echo get_theme_file_uri('/img/Beary_Bare Logo.png');?>" alt="Logo Image">
-            </div>
-            <h3 class="text-center pt-3">TITLE</h3>
-            <p class="excerpt-front text-center pt-2 w-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
-                deserunt dignissimos sit recusandae unde fugiat illum quae numquam provident mollitia.</p>
-        </div>
-    </div>
+
+         <?php }
+         ?>
+        
+        
     <div class="fp-buttons d-flex justify-content-center pt-5 pb-5">
-        <button type="button" class="btn btn-fp btn-primary border border-2 border-dark">Primary</button>
-        <button type="button" class="btn btn-fp btn-primary border border-2 border-dark">Primary</button>
+    <a href="<?php echo site_url('/about');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">About</button></a>
+    <a href="<?php echo site_url('/blog');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">All blogs</button></a>
     </div>
 </div>
 <div class="subscribe d-flex align-items-center bg-dark">
