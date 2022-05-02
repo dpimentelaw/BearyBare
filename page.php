@@ -17,7 +17,7 @@ $staffPosts = new WP_Query(array (
 
 while($staffPosts ->have_posts()) {
         $staffPosts ->the_post(); ?>
-        <div class="row about-posts">
+        <div class="row about-posts mb-5">
             <div class="col-6 about-image">    
                 <?php the_post_thumbnail( 'medium_large');?> 
             </div>
