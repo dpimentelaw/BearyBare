@@ -117,4 +117,20 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 // register a new menu
 register_nav_menu('main-menu', 'Main menu');
 
+// Custom Widgets
+function custom_widgets() {
+
+  register_sidebar( array(
+		'name'          => 'Footer Widgets',
+		'id'            => 'footer_widgets',
+		'before_widget' => '<div class="col fs-5 d-flex flex-column"><div class="footer_widget">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+
+
+}
+add_action( 'widgets_init', 'custom_widgets' );
+
 ?>

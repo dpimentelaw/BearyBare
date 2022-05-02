@@ -32,5 +32,5 @@ while($staffPosts ->have_posts()) {
     <?php }
 
     ?>
-
-    <?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>
