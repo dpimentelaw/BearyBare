@@ -18,24 +18,33 @@
         ));
         while ($frontPagePosts ->have_posts()) {
             $frontPagePosts->the_post(); ?>
-          <div class="col-4 d-flex flex-column align-items-center">
-            <div class="post-image border border-dark border-2" >
-                <img src="<?php echo get_theme_file_uri('/img/Beary_Bare Logo.png');?>" alt="Logo Image">
-            </div>
-            <h3 class="text-center pt-3"><?php the_title(); ?></h3>
-            <p class="excerpt-front text-center pt-2 w-75"><?php echo wp_trim_words(get_the_content(),20);?></p>
-        </div>
-
+          <div class="col-lg-4 d-flex flex-column flex-wrap align-items-center g-3">
+              <div class="home-card border border-2 border-dark" style="width: 18rem;">
+                  <?php the_post_thumbnail();?>
+                  <div class="card-body">
+                      <h5 class="card-title"><?php the_title(); ?></h5>
+                      <p class="card-text"><?php echo wp_trim_words(get_the_content(),20);?></p>
+                  </div>
+                  <div class="card-button">
+                      <a href="<?php the_permalink();?>" class="card-link"><button type="button"
+                              class="btn btn-fp border border-2 border-dark">Read
+                              More</button></a>
+                  </div>
+              </div>
+          </div>
+ 
          <?php }
          ?>
-        
+    </div>
+        </div>
+
         
     <div class="fp-buttons d-flex justify-content-center pt-5 pb-5">
     <a href="<?php echo site_url('/about');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">About</button></a>
     <a href="<?php echo site_url('/blog');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">All blogs</button></a>
     </div>
 </div>
-<div class="subscribe d-flex align-items-center bg-dark">
+<div class="container-fluid subscribe d-flex align-items-center bg-dark">
     <div class="col subscribe-text text-center">
         <h2 class= "text-white subscribe-title">Stay In Touch</h>
         <p class= "text-white subscribe-att">Sign Up to Our Montly Newsletter</p>
@@ -47,6 +56,28 @@
         </form>
     </div>
 </div>
+<div class="container-flud info-section">
+    <div class="row info-row d-flex justify-content-center">
+        <div class="col-md-6 info">
+            <div class="info-image d-flex align-items-center justify-content-center">
+                <img src="<?php echo get_theme_file_uri('/img/brown_bear_info.jpg ')?>" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 bear-info d-flex flex-column">
+            <h2 class="text-center pt-2"><Strong>Bear Spotight: Brown Bear</Strong></h2>
+            <div class="box-info border border-1 border-dark ps-3 pt-3 mt-2">
+                <p><strong>Population:</strong>110,000</p>
+                <p><strong>Scientific Name:</strong>Ursus arctos</p>
+                <p><strong>Height:</strong>3.35 Feet to shoulders</p>
+                <p><strong>Weight:</strong>Up to 1500 lbs</p>
+                <p><strong>Length:</strong>6.5 feet</p>
+                <br>
+                <h3><strong>Why They Matter:</strong></h3>
+                <p class="info-p">Few animals have captured the imagination like brown bears. They can stand on two legs, walk on the soles of their feet, pick things up with their “fingers,” and often eat what we eat. This—coupled with their ability to communicate with one another through scratch marks left on trees, smells and sounds—establishes a similarity to our own way of life. Some of the largest living carnivores, brown bears have fallen prey to hunting and other conflicts with humans.</p>
+            </div>
+        </div>
 
+</div>
+</div>
 
 <?php get_footer(); ?>

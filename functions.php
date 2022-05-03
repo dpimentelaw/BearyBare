@@ -10,7 +10,7 @@ function theme_files()
     wp_enqueue_script( 'bootstrap.js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), true, true);
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), true, true );
 
-    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato&display=swap');
 }
 add_action( 'wp_enqueue_scripts', 'theme_files');
 
