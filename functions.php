@@ -48,6 +48,15 @@ function theme_widgets_init() {
       'before_title'  => '<h2 class="widgettitle">',
       'after_title'   => '</h2>',
   ) );
+  register_sidebar( array(
+    'name'          => __( 'Blog Sidebar', 'theme-domain' ),
+    'id'            => 'sidebar-2',
+    'description'   => __( 'Widgets in this area will be shown on the front page.', 'theme-domain' ),
+    'before_widget' => '<aside>',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+) );
 }
 add_action( 'widgets_init', 'theme_widgets_init' );
 

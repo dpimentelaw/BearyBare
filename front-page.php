@@ -7,7 +7,7 @@
     <p><?php echo get_option('blogdescription'); ?></p>
     </div>
 </div>
-<div class="container front-blog">
+<div class="container front-blog mb-3">
     <div class="row pt-4 text-center">
         <h2 class="recent-posts"> Recent Posts</h2>
     </div>
@@ -18,7 +18,7 @@
         ));
         while ($frontPagePosts ->have_posts()) {
             $frontPagePosts->the_post(); ?>
-          <div class="col-lg-3 d-flex flex-column flex-wrap align-items-center g-3">
+          <div class="col g-3 front-cards d-flex flex-column flex-wrap align-items-center g-3">
               <div class="home-card border border-2 border-dark" style="width: 18rem;">
                   <?php the_post_thumbnail();?>
                   <div class="card-body">
@@ -35,7 +35,7 @@
  
          <?php }
          ?>
-         <div class="col-lg-3 border border-2 widget-front">
+         <div class="col d-flex flex-column flex-wrap border border-2 widget-front mt-5">
              <?php if(dynamic_sidebar('Sidebar')) :else : endif; ?>
          </div>
     </div>
