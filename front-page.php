@@ -18,7 +18,7 @@
         ));
         while ($frontPagePosts ->have_posts()) {
             $frontPagePosts->the_post(); ?>
-          <div class="col-lg-4 d-flex flex-column flex-wrap align-items-center g-3">
+          <div class="col-lg-3 d-flex flex-column flex-wrap align-items-center g-3">
               <div class="home-card border border-2 border-dark" style="width: 18rem;">
                   <?php the_post_thumbnail();?>
                   <div class="card-body">
@@ -35,14 +35,11 @@
  
          <?php }
          ?>
+         <div class="col-lg-3 border border-2 widget-front">
+             <?php if(dynamic_sidebar('Sidebar')) :else : endif; ?>
+         </div>
     </div>
         </div>
-
-        
-    <div class="fp-buttons d-flex justify-content-center pt-5 pb-5">
-    <a href="<?php echo site_url('/about');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">About</button></a>
-    <a href="<?php echo site_url('/blog');?>"><button type="button" class="btn btn-fp btn-primary border border-2 border-dark text-white">All blogs</button></a>
-    </div>
 </div>
 <div class="container-fluid subscribe d-flex align-items-center bg-dark">
     <div class="col subscribe-text text-center">

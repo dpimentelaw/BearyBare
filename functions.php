@@ -38,6 +38,20 @@ function staff_post_types() {
 }
 add_action('init','staff_post_types');
 
+function theme_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Sidebar', 'theme-domain' ),
+      'id'            => 'sidebar-1',
+      'description'   => __( 'Widgets in this area will be shown on the front page.', 'theme-domain' ),
+      'before_widget' => '<aside>',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2 class="widgettitle">',
+      'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'theme_widgets_init' );
+
+
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 {
