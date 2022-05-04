@@ -22,7 +22,12 @@ nav, .main-footer, .copy {
 .navbar-brand img {
     width: 100px;
 }
-
+h1,h2,h3,h4 {
+    font-family: 'Bubblegum Sans', cursive;
+}
+a, p {
+    font-family: 'Lato', sans-serif;
+}
 .fw-600 {
     font-weight: 600;
 }
@@ -61,15 +66,12 @@ nav ul > li {
     object-fit: cover;
 }
 .subscribe {
-    height: 300px;
+    height: 250px;
 }
 .btn-fp {
     height: 50px;
     width: 300px;
     margin-right: 5em;
-}
-.subscribe-text h2 {
-    font-family: 'Indie Flower', cursive;
 }
 .front-hr {
     width: 100%;
@@ -113,4 +115,106 @@ nav ul > li {
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+.home-card {
+  box-shadow: -1em 0 .4em #899a89;
+  transition: 0.3s
+}
+.home-card img {
+    width: 100%;
+    height: 200px;
+
+}
+.card-button .btn-fp {
+    background-color: white;
+    width: 100%;
+    color: black;
+}
+.card-button .btn-fp:hover,
+.card-button .btn-fp:focus {
+    box-shadow: inset 0 0 0 2em #9A899A;
+    transition: 0.3s;
+}
+.fp-buttons .btn-fp {
+    background-color: #89899a;
+}
+.info-section {
+    height: 600px;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #899a89, #9a899a );;
+}
+.info-image {
+    width: 100%;
+    height: 100%;
+}
+.info-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info-row {
+    height: 100%;
+}
+.info-p {
+    width: 90%;
+}
+.bear-info {
+    height: 100%;
+    width: 100%;
+}
+.info {
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (max-width: 906px) {
+    .info{
+        display: none;
+    }
+    .box-info{
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 778px) {
+    .about-posts {
+        height: 100%;
+    }
+    .about-image {
+        width: 100% !important;
+    }
+    .about-content {
+        align-items: center;
+        width: 100% !important;
+    }
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-container h2 {
+        align-items: center;
+    }
+    .blog-images img {
+        align-items: center;
+    }
+    .info-box {
+        align-items: center;
+    }
+}
+
+.widget-front {
+    background-color: #899a89;
+    height: fit-content;
+}
+.wp-block-button__link {
+    width: 100%;
+    
+}
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+    box-shadow: inset 0 0 0 2em #9A899A;
+    transition: 0.3s;
+}
+.front-cards {
+    box-sizing: border-box;
+    height: 100%;
+    width: max-content;
 }
