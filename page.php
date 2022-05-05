@@ -12,7 +12,7 @@
     </div>
 <?php
 $staffPosts = new WP_Query(array (
-    'post_type' => 'ceo', //This Needs to be changed
+    'post_type' => 'staff', //This Needs to be changed
 ));
 
 while($staffPosts ->have_posts()) {

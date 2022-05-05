@@ -7,7 +7,7 @@ Description: Bear Blog Theme
 Version: 1.0
 Requires at least: 5.0
 Tested up to: 5.9
-Requires PHP: 8.0
+Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mycustomtheme
@@ -116,6 +116,7 @@ nav ul > li {
     object-fit: cover;
     object-position: center;
 }
+
 .home-card {
   box-shadow: -1em 0 .4em #899a89;
   transition: 0.3s
@@ -218,3 +219,6 @@ nav ul > li {
     height: 100%;
     width: max-content;
 }
+
+.foot-widget-header {
+    font-family: 'Bubblegum Sans', cursive;
