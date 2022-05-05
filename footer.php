@@ -1,6 +1,6 @@
 <footer class="main-footer pt-4">
         <div class="container">
-          <div class="row">
+          <div class="row d-flex justify-content-evenly text-center">
                   <?php if ( is_active_sidebar( 'footer_widgets' ) ) : ?>
                       <?php dynamic_sidebar( 'footer_widgets' ); ?>
                   <?php endif; ?>
