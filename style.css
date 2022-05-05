@@ -114,3 +114,7 @@ nav ul > li {
     object-fit: cover;
     object-position: center;
 }
+
+.foot-widget-header {
+    font-family: 'Bubblegum Sans', cursive;
+}

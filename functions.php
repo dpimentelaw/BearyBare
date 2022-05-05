@@ -125,8 +125,8 @@ function custom_widgets() {
 		'id'            => 'footer_widgets',
 		'before_widget' => '<div class="col fs-5 d-flex flex-column"><div class="footer_widget">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
 	) );
 
 
