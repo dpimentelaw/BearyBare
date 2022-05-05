@@ -5,7 +5,8 @@
     <hr class= "front-hr w-25">
     </div>
 </div>
-
+<div class="row">
+<div class="col-lg-8">
 <?php
     if(have_posts()) {
         while(have_posts()) {
@@ -20,10 +21,14 @@
                 </div>
                 <?php the_content(); ?>
             <hr>
-        </div>
+            </div>
         <?php }
 }
 ?>
+</div>
+        <div class="col-lg-4 mt-3">
+        <?php if(dynamic_sidebar('Blog Sidebar')) :else : endif; ?>
+        </div>
 
 
 <?php get_footer(); ?>

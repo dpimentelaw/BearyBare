@@ -10,7 +10,7 @@ function theme_files()
     wp_enqueue_script( 'bootstrap.js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), true, true);
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), true, true );
 
-    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    wp_enqueue_style('google-fonts','//fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lato&display=swap');
 }
 add_action( 'wp_enqueue_scripts', 'theme_files');
 
@@ -37,6 +37,29 @@ function staff_post_types() {
 
 }
 add_action('init','staff_post_types');
+
+function theme_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Sidebar', 'theme-domain' ),
+      'id'            => 'sidebar-1',
+      'description'   => __( 'Widgets in this area will be shown on the front page.', 'theme-domain' ),
+      'before_widget' => '<aside>',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h2 class="widgettitle">',
+      'after_title'   => '</h2>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Blog Sidebar', 'theme-domain' ),
+    'id'            => 'sidebar-2',
+    'description'   => __( 'Widgets in this area will be shown on the front page.', 'theme-domain' ),
+    'before_widget' => '<aside>',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+) );
+}
+add_action( 'widgets_init', 'theme_widgets_init' );
+
 
 // bootstrap 5 wp_nav_menu walker
 class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
