@@ -15,6 +15,10 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+body {
+    background-color: #8B7474 !important;
+}
+
 nav, .main-footer, .copy {
     background-color: #9A899A;
 }
@@ -126,6 +130,11 @@ nav ul > li {
     height: 200px;
 
 }
+
+.card-body {
+    background-color: white;
+}
+
 .card-button .btn-fp {
     background-color: white;
     width: 100%;
@@ -222,4 +231,23 @@ nav ul > li {
 
 .foot-widget-header {
     font-family: 'Bubblegum Sans', cursive;
+}
+
+.blog_sidebar a:hover {
+    font-weight: 400;
+}
+
+.footer_widget a:hover {
+    font-weight: 400;
+}
+
+.blog_link a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.blog_link a:hover {
+    color:lightblue;
+    font-weight: 400;
 }
