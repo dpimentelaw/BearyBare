@@ -6,6 +6,8 @@
         $('.footer_widget ul > li > a').addClass('text-decoration-none text-dark fw-600');
         $('.footer_widget h2').addClass('foot-widget-header');
 
+        $('.blog_sidebar ul > li > a').addClass('text-decoration-none text-dark fw-600');
+        
     });
 
 })(jQuery);
