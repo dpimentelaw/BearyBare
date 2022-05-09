@@ -54,15 +54,15 @@
     </div>
 </div>
 <div class="container-flud info-section">
-    <div class="row info-row d-flex justify-content-center">
-        <div class="col-md-6 info">
+    <div class="row info-row d-flex justify-content-center g-0">
+        <div class="col-md-6 info p-3">
             <div class="info-image d-flex align-items-center justify-content-center">
                 <img src="<?php echo get_theme_file_uri('/img/brown_bear_info.jpg ')?>" alt="">
             </div>
         </div>
-        <div class="col-md-6 bear-info d-flex flex-column">
+        <div class="col-md-6 bear-info d-flex flex-column pe-0">
             <h2 class="text-center pt-2"><Strong>Bear Spotight: Brown Bear</Strong></h2>
-            <div class="box-info border border-1 border-dark ps-3 pt-3 mt-2">
+            <div class="box-info border border-1 border-dark pt-3 me-3 mt-2">
                 <p><strong>Population:</strong>110,000</p>
                 <p><strong>Scientific Name:</strong>Ursus arctos</p>
                 <p><strong>Height:</strong>3.35 Feet to shoulders</p>
