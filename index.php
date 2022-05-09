@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<div class="banner d-flex flex-column justify-content-center align-items-center" style="background-image: url(<?php echo get_theme_file_uri('/img/banner.jpg'); ?>);">
+<div class="banner d-flex flex-column justify-content-center align-items-center g-0" style="background-image: url(<?php echo get_theme_file_uri('/img/banner.jpg'); ?>);">
     <h1>Our Blog Page</h1>
     <hr class= "front-hr w-25">
     </div>
 </div>
-<div class="row">
+<div class="row g-0">
 <div class="col-lg-8">
 <?php
     if(have_posts()) {
